@@ -1,3 +1,4 @@
+require('dotenv').config()
 const { createServer } = require('http');
 const routes = require('./routes');
 const next = require('next');

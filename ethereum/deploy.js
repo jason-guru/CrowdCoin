@@ -1,11 +1,11 @@
-require('dotenv').config()
+require('dotenv').config({path: '../.env'})
 const HDWalletProvider = require('truffle-hdwallet-provider');
 const Web3 = require('web3');
 const compiledFactory = require('./build/CampaignFactory.json');
 
 const provider = new HDWalletProvider(
   process.env.MNEMONICS,
-  'https://rinkeby.infura.io/v3/7521994a34104f0e9375ca0322e82d12'
+  process.env.PROJECT
 );
 const web3 = new Web3(provider);
 
